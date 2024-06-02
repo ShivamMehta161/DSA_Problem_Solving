@@ -4,7 +4,7 @@ void ShiftBy1(int *a,int size){
     int temp=a[size-1];
     for(int i=size-1;i>=0;i--){
         a[i]=a[i-1];
-
+        
     }
     a[0]=temp;
 }
