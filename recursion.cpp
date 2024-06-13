@@ -3,6 +3,10 @@
 #include<vector>
 using namespace std;
 // arr={1,2,2,4,5}
+// bool checkPalindrome(string s,int index){
+//     if
+
+// }
 vector<int> AllOccurencies(int arr[],int size,int index,int target){ 
     vector <int> v;
     if(index>=size){
@@ -133,14 +137,28 @@ int sum(int n){
         return n+sum(n-1);
     }
 }
+void printNtimes(string s,int n,int i ){
+    if(i>n){
+        return;
+    }
+    cout<<s<<endl;
+    printNtimes(s,n,i+1);
+}
+void reverseArray(vector<int>&arr,int size,int left,int right){
+    if(left>=right){
+        return;
+    }
+    swap(arr[left],arr[right]);
+    reverseArray(arr,size,left+1,right-1);
+}
 
 int main(){
 // {   cout<<fact(7);
 // Normalcounting(7);
 // cout<<pow(2,5);
-// cout<<sum(10);
-int arr[5]={1,2,1,1,5};
-int maxi=INT_MIN;
+// // cout<<sum(10);
+// int arr[5]={1,2,1,1,5};
+// int maxi=INT_MIN;
 
 // printArray(arr,5,0);
     // cout<<linearSearch(arr,5,0,13);
@@ -152,8 +170,17 @@ int maxi=INT_MIN;
     // printArray(arr,5,0);
     // Arraymax(arr,5,0,&maxi);
     // cout<<maxi;
-// printAllOccurencies(arr,5,0,1);
-vector<int>a=AllOccurencies(arr,5,0,1);
-printVector(a);
+// // printAllOccurencies(arr,5,0,1);
+// vector<int>a=AllOccurencies(arr,5,0,1);
+// printVector(a);
+// printNtimes("ABCD",5,1);
+    vector<int> a={1,2,3,4,5,6};
+    int size=a.size();
+    reverseArray(a,size,0,size-1);
+    for(int elem: a){
+        cout<<elem<<" ";
+    }
+    
+    
     return 0;
 }
