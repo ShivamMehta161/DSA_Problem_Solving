@@ -95,7 +95,7 @@ int main() {
     string output = "";
 
     if (maze[0][0] == 0) {
-        cout << "No paths possible";
+        cout << "No paths possible.";
     }
     else {
         visited[0][0] = true;
